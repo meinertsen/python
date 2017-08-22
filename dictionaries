@@ -148,3 +148,23 @@ for each in ordinal:
     print df[each].head(5)
     df[each].cat.codes
     dict( enumerate(df[each].cat.categories) )
+
+
+# How to sort a Dictionary
+links_key = {'Z is first': 'Zebra', 'A is second': 'Amazing', 'B is third': 'Baboon', 'Y is fourth': 'Yankees'}
+printo = {'Z is first': 1, 'A is second': 2, 'B is third': 3, 'Y is fourth': 4}
+
+In[]:  a = sorted(links_key, key=printo.__getitem__)
+In[]:  a
+Out[]: ['Z is first', 'A is second', 'B is third', 'Y is fourth']
+
+In:    b = [links_key[i] for i in sorted(links_key, key=printo.__getitem__)]
+In[]:  b
+Out[]: ['Zebra', 'Amazing', 'Baboon', 'Yankees']
+
+In[]:  zip(a,b)
+Out[]: 
+[('Z is first', 'Zebra'),
+ ('A is second', 'Amazing'),
+ ('B is third', 'Baboon'),
+ ('Y is fourth', 'Yankees')]
