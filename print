@@ -24,7 +24,8 @@ def dprint(s):
         sys.stdout.write( '%s' % c )
         sys.stdout.flush()
         time.sleep(0.01)
-        
+
+# Defines sprint function that calls tread and dprint
 def sprint(s): # Prints sentences
 x = tread(s)
 print(chr(27) + "[2J")
