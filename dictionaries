@@ -57,7 +57,7 @@ print pd.DataFrame.from_dict(features, orient='index').rename(columns= {0: 'Des'
 print pd.DataFrame(list(features.iteritems()),columns=['Key','List of Lists']).to_string()
 print pd.DataFrame(features,index = columns).T.to_string()
 
-# Create a List of Lists and fill it up
+# Create a List of Lists from Dictionary of (List of Lists)
 LoL_rows, LoL = [], []
 for i in features:
     LoL_rows = [i] # Inserts features.keys() as the first column
